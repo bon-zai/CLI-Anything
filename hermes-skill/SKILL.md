@@ -85,7 +85,7 @@ import click
 ...
 
 @click.group(invoke_without_command=True)
-@click.option('--json', is_flag=True, help='JSON output')
+@click.option('--json', 'json_mode', is_flag=True, help='JSON output')
 @click.pass_context
 def cli(ctx, json_mode):
     ctx.ensure_object(dict)
